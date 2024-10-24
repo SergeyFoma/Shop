@@ -6,3 +6,9 @@ def index(request):
 		'a':a,
 	}
 	return render(request, 'shop/index.html', context)
+
+def about(request):
+	context={
+
+	}
+	return render(request, 'shop/about.html', context)
