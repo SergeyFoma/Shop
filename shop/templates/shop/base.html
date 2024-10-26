@@ -10,6 +10,9 @@
 <body>
 	<div class="header">
 		{% block header %}
+			{% for cat in categories %}
+				<li><a href="">{{ cat.name }}</a></li>
+			{% endfor %}
 		{% endblock %}
 	</div>
 	<div class="sidebar">

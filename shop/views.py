@@ -1,9 +1,10 @@
 from django.shortcuts import render
+from goods.models import Categories
 
 def index(request):
-	a='INDEX'
+	categories=Categories.objects.all()
 	context={
-		'a':a,
+		'categories':categories,
 	}
 	return render(request, 'shop/index.html', context)
 
