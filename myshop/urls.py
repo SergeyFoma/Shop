@@ -15,17 +15,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from debug_toolbar.toolbar import debug_toolbar_urls
-#from myshop.settings import DEBUG
+#from debug_toolbar.toolbar import debug_toolbar_urls
+from myshop.settings import DEBUG
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('shop.urls', namespace='shop')),
     path('catalog/', include('goods.urls', namespace='goods')),
-] + debug_toolbar_urls()
+] #+ debug_toolbar_urls()
 
-# if DEBUG:
-#     urlpatterns+=[
-#         path("__debug__/",include("debug_toolbar.urls")),
-#         #path(debug_toolbar_urls())
-#     ] 
+if DEBUG:
+    urlpatterns+=[
+        path("__debug__/",include("debug_toolbar.urls")),
+        #path(debug_toolbar_urls())
+    ] 
