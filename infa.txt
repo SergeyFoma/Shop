@@ -1,0 +1,8 @@
+python manage.py
+debugtoolbar
+python manage.py debugsqlshell
+
+ipython
+pip install ipython
+
+url dispatcher

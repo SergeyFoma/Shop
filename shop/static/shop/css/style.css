@@ -3,38 +3,59 @@
 	margin: 0;
 }
 
+body {
+	background-image: url('../img/bg-image.jpg')
+	/*min-height: 1800px;*/
+}
+
 .header {
 	width: 100%;
 	height: 200px;
-	background: yellow;
+	/*background: yellow;*/;
 }
 
 .sidebar {
 	display: flex;
 	flex-direction: row;
 	/*justify-content: center;*/
+	min-height: 800px;
 }
 
 .sideleft {
 	width: 10%;
-	min-height: 800px;
-	background: lightblue;
+	/*min-height: 1800px;*/
+	/*background: lightblue;*/
 }
 
 .sidecentr {
 	width: 80%;
-	min-height: 800px;
-	background: lightgreen;
+	/*min-height: 1800px;*/
+	/*background: lightgreen;*/
 }
 
 .sideright {
 	width: 10%;
-	min-height: 800px;
-	background: lightblue;
+	/*min-height: 1800px;*/
+	/*background: lightblue;*/
+	opacity: 1.0;
 }
 
 .footer {
 	width: 100%;
 	height: 200px;
-	background: yellow;
+	/*background: yellow;*/
+}
+
+.block_card {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+.card_body {
+	width: 200px;
+	height: 400px;
+	background: #fff;
+	margin: 20px;
 }
