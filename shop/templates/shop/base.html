@@ -12,12 +12,12 @@
 	<div class="header">
 		<a href="{% url 'shop:index' %}">INDEX</a>
 		<a href="{% url 'shop:about' %}">AABBout</a>
-	<a href="{% url 'goods:index' %}">catalog</a>
-	<a href="{% url 'goods:products' %}">products</a>
+	
+
 		{% block header %}
 		{% tag_categories as categories %}
 			{% for cat in categories %}
-				<li><a href="">{{ cat.name }}</a></li>
+				<li><a href="{% url 'goods:index' category_slug=cat.slug %}">{{ cat.name }}</a></li>
 			{% endfor %}
 		{% endblock %}
 

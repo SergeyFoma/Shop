@@ -21,7 +21,7 @@
 				</div>
 			{% endif %}
 
-			<p><a href="">{{ i.name }}</a></p>
+			<p><a href="{% url 'goods:products' i.slug %}">{{ i.name }}</a></p>
 			<p>{{i.description}}</p>
 
 			{% if i.discount %}
@@ -38,6 +38,7 @@
 	
 	{% endfor %}
 </div>
-	<a href="{% url 'goods:products' %}">PRODUCTS</a>
+	
 	
 {% endblock %}
+<!--<a href="{% url 'goods:products' %}">PRODUCTS</a>--!
