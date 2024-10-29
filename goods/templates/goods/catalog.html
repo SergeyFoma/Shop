@@ -1,15 +1,26 @@
 {% extends 'shop/base.html' %}
 {% load static %}
+
 {% block sidecentr %}
 <div class="block_card">
 	{% for i in goods %}
 	
 		<div class="card_body">
+			
 			{% if i.image %}
-				<img src="{{i.image.url}}" alt="{{i.name}}"width='200px'height='200px'>
+				<div class="text_discount">
+					<img src="{{i.image.url}}" alt="{{i.name}}"width='200px'height='200px'>
+					<div class="discout_p"><p>Скидка: {{i.discount}}</p></div>
+				</div>
+
 			{% else %}
-				<img src="{% static '../media/goods_images/Not found image.png' %}" alt=""width='200px'height='200px'>
+
+				<div class="text_discount">
+					<img src="{% static '../media/goods_images/Not found image.png' %}" alt="Not found image"width='200px'height='200px'>
+					<div class="discout_p"><p>Скидка: {{i.discount}}</p></div>
+				</div>
 			{% endif %}
+
 			<p><a href="">{{ i.name }}</a></p>
 			<p>{{i.description}}</p>
 

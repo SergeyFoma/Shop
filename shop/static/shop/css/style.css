@@ -58,4 +58,25 @@ body {
 	height: 400px;
 	background: #fff;
 	margin: 20px;
+	/*display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	width: 100%;*/
+}
+
+.text_discount {
+	position: relative;
+}
+.discout_p {
+	position: absolute;
+	top: 5%;
+	left: 80px;
+	/*text-transform: uppercase;*/
+	color: white;
+	width: 100px;
+	background: #00000094;
+	padding: 3px;
+	text-align: center;
+	/*font: bold 24px/34px Helvetica, Sans-Serif;*/
+
 }
