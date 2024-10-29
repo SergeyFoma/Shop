@@ -1,13 +1,18 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from goods.models import Products
+from django.core.paginator import Paginator
 
 def catalog(request,category_slug):
 	if category_slug=='vse-tovary':
 		goods=Products.objects.all()
 	else:
-		goods=Products.objects.filter(category__slug=category_slug)
+		goods=get_object_or_404(Products.objects.filter(category__slug=category_slug))
+
+	paginator = Paginator(goods, 3)
+	current_page = paginator.page(1)
+
 	context={
-		'goods':goods,
+		'goods':current_page,
 	}
 	return render(request, 'goods/catalog.html', context=context)
 
