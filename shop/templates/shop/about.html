@@ -3,4 +3,6 @@
 {% block sidecentr %}
 	
 	<a href="{% url 'shop:index' %}">INDEX</a>
+	{%comment%}<a href="{% url 'goods:index' %}">catalog</a>{%endcomment%}
+	<a href="{% url 'goods:products' %}">products</a>
 {% endblock %}
