@@ -24,7 +24,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('shop.urls', namespace='shop')),
-    path('catalog/', include('goods.urls', namespace='goods')),
+    path('catalog/', include('goods.urls', namespace='catalog')),
 ] #+ debug_toolbar_urls()
 
 if settings.DEBUG:

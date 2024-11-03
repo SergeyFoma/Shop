@@ -17,7 +17,7 @@
 		{% block header %}
 		{% tag_categories as categories %}
 			{% for cat in categories %}
-				<li><a href="{% url 'goods:index' category_slug=cat.slug %}">{{ cat.name }}</a></li>
+				<li><a href="{% url 'catalog:index' category_slug=cat.slug %}">{{ cat.name }}</a></li>
 			{% endfor %}
 		{% endblock %}
 
