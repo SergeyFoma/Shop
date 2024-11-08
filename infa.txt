@@ -6,3 +6,10 @@ ipython
 pip install ipython
 
 url dispatcher
+
+fixtures -> python manage.py dumpdata goods.Categories --indent 4> fixtures/goods/categories.json
+
+C:\Users\Admin\project-3\Shop>chcp
+
+
+full text search
