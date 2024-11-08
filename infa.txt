@@ -7,8 +7,8 @@ pip install ipython
 
 url dispatcher
 
-fixtures -> python manage.py dumpdata goods.Categories --indent 4> fixtures/goods/categories.json
-
+fixtures -> python -Xutf8  manage.py dumpdata goods.Categories --indent 4> fixtures/goods/categories.json
+python manage.py loaddata fixtures/goods/categories.json
 C:\Users\Admin\project-3\Shop>chcp
 
 
